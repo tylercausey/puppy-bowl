@@ -1,0 +1,65 @@
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+#allCards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: .1px solid black;
+    height: 400px;
+    width: 300px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHeader{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.dogName{
+    font-size: xx-large;
+    height: fit-content;
+    width: fit-content;
+}
+
+.dogID{
+    font-size: xx-large;
+    height: fit-content;
+    width: fit-content;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+}
+
+.puppyStats{
+    border: 2px solid black;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    font-size: large;
+}
