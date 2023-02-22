@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import { DogCards, SingleDog, NameSearch, BreedSearch } from "./components";
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 const Website = () => {
@@ -21,8 +21,11 @@ const Website = () => {
     }, [])
     return(
         <BrowserRouter>
-            <div id='content'> 
-                <NameSearch puppyProps={puppyList}> </NameSearch>
+            <div id='content'>
+                <div id='searchBars'> 
+                    <NameSearch puppyProps={puppyList}> </NameSearch>
+                    <BreedSearch puppyProps={puppyList}> </BreedSearch>
+                </div>
                 <div>
                     { 
                         <Routes>

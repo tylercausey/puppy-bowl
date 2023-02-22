@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NameSearch = (props) =>{
     const [searchQuery, setSearchQuery] = useState('');
@@ -22,14 +23,14 @@ const NameSearch = (props) =>{
             </input>
             <section>
                 {
-                    !filteredDogs.length ? <div>No data yet!</div> : filteredDogs.map((singleDog, idx) => {
+                    !filteredDogs.length || filteredDogs.length >= 10 ? <div>No data yet!</div> : filteredDogs.map((singleDog) => {
                         return (
-                            <div key={idx}>
+                            <div key={singleDog.id}>
                                 <p>Name: {singleDog.name}</p>
-                                {/* <Link to={"/" + idx}>Go to {singleDog.name}</Link> */}
+                                <Link to={"/" + singleDog.id}>Go to {singleDog.name}</Link>
                             </div>
                         )
-                    }) 
+                    })
                 }
             </section>
         </div>

@@ -12,11 +12,11 @@ const DogCards = (props) => {
                     return(
                         <div key={idx} className="card">
                             <div className="cardHeader">
-                                <p className="dogName"> {individualPuppy.name}</p>
-                                <p className="dogID">{individualPuppy.id}</p>
+                                <p className="dogName"> {individualPuppy.name}&nbsp;&nbsp; </p>
+                                <p className="dogID"> #{individualPuppy.id}</p>
                             </div>
                             <img src={individualPuppy.imageUrl} alt="Puppy Pic"></img>
-                            <Link to={'/' + idx} className="seeDetailsButton">See Details</Link>
+                            <Link to={'/' + individualPuppy.id} className="seeDetailsButton">See Details</Link>
                         </div>
                     )   
                 })
